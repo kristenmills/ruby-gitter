@@ -26,6 +26,10 @@ module Gitter
         end
         channel_list
       end
+
+      def join_room(uri)
+        Hashie::Mash.new(self.class.post("/rooms", headers: @headers, query: { uri: uri } ))
+      end
     end
   end
 end
