@@ -1,10 +1,12 @@
 require "httparty"
 require "gitter/client/rooms"
+require "gitter/client/messages"
 
 module Gitter
   class Client
     include HTTParty
     include Gitter::Client::Rooms
+    include Gitter::Client::Messages
 
     base_uri "https://api.gitter.im/v1"
 
