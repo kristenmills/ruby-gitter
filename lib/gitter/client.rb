@@ -12,6 +12,8 @@ module Gitter
 
     base_uri "https://api.gitter.im/v1"
 
+    attr_accessor :headers
+
     def initialize(token)
       @headers =  {
                     "Content-Type" => "application/json",

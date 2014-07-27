@@ -1,7 +1,8 @@
-require 'bundler/setup'
-Bundler.setup
+require 'rspec'
+require 'simplecov'
 
-require 'gitter'
+SimpleCov.start
+require File.join(File.dirname(__FILE__), '..', 'lib', 'gitter')
 
 RSpec.configure do |config|
 end
